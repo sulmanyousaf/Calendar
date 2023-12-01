@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray">#A2A2B5</color>
+    <color name="inner_box_bg">#CC4E4E61</color>
+    <color name="upper_box_bg">#353542</color>
+    <color name="below_box_bg">#1C1C23</color>
+    <color name="orange">#FF7966</color>
+    <color name="transparent">#00000000</color>
+</resources>

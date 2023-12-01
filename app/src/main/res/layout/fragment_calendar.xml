@@ -1,0 +1,273 @@
+<!-- res/layout/activity_main.xml -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/below_box_bg"
+    tools:context=".ui.fragment.calendar.CalendarFragment">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineMid_h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineMid_h_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottom_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.86"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.99"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStartMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineMidMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEndMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/upperbox_bg"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineMid_h"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.04"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineMid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.6"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.96"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.04"/>
+
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_heading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Calendar"
+            android:textAlignment="center"
+            android:textSize="@dimen/_13ssp"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/inter_medium"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toTopOf="@id/guidelineTop" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/settings"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintTop_toTopOf="@id/tv_heading"
+            app:layout_constraintBottom_toBottomOf="@id/tv_heading"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_sub_heading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Subs \nSchedule"
+            android:textAlignment="textStart"
+            android:textSize="@dimen/_33ssp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/inter_bold"
+            app:layout_constraintEnd_toEndOf="@id/guidelineMid"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/tv_heading" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_subscription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="3 subscriptions for today"
+            android:textAlignment="textStart"
+            android:textSize="@dimen/_11ssp"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/inter_medium"
+            app:layout_constraintEnd_toEndOf="@id/guidelineMid"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toTopOf="@id/il_calendar"
+            app:layout_constraintBottom_toBottomOf="@id/il_calendar"/>
+
+        <!--    <androidx.appcompat.widget.AppCompatSpinner-->
+        <!--        android:id="@+id/monthSpinner"-->
+        <!--        android:layout_width="0dp"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_marginTop="16dp"-->
+
+        <!--        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"-->
+        <!--        app:layout_constraintStart_toStartOf="@id/guidelineMid"-->
+        <!--        app:layout_constraintTop_toTopOf="parent"/>-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/il_calendar"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:background="@null"
+            app:endIconDrawable="@drawable/arrow_down"
+            app:endIconTint="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineMid"
+            app:layout_constraintTop_toBottomOf="@id/tv_sub_heading">
+
+            <AutoCompleteTextView
+                android:id="@+id/auto_complete_calendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="January"
+                android:textColor="@color/white"
+                android:background="@drawable/dropdown"
+                android:fontFamily="@font/inter_medium"
+                android:textSize="@dimen/_10ssp"
+                android:textAlignment="textStart"
+                tools:ignore="LabelFor"
+                android:popupBackground="@drawable/calendar_spinner_dropdown_bg" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/calendarRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_date_card"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/il_calendar"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_month"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="January"
+        android:textAlignment="textStart"
+        android:textSize="@dimen/_16ssp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/inter_bold"
+        app:layout_constraintEnd_toEndOf="@id/guidelineMidMain"
+        app:layout_constraintStart_toStartOf="@id/guidelineStartMain"
+        app:layout_constraintTop_toTopOf="@id/guidelineMid_h_2"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="01.08.2022"
+        android:textAlignment="textStart"
+        android:textSize="@dimen/_10ssp"
+        android:textColor="@color/gray"
+        android:fontFamily="@font/inter_medium"
+        app:layout_constraintEnd_toEndOf="@id/tv_month"
+        app:layout_constraintStart_toStartOf="@id/tv_month"
+        app:layout_constraintTop_toBottomOf="@id/tv_month"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="$24.98"
+        android:textAlignment="center"
+        android:textSize="@dimen/_16ssp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/inter_bold"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEndMain"
+        app:layout_constraintStart_toStartOf="@id/guidelineMidMain"
+        app:layout_constraintTop_toTopOf="@id/guidelineMid_h_2"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_price_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="01.08.2022"
+        android:textAlignment="center"
+        android:textSize="@dimen/_10ssp"
+        android:textColor="@color/gray"
+        android:fontFamily="@font/inter_medium"
+        app:layout_constraintEnd_toEndOf="@id/tv_price"
+        app:layout_constraintStart_toStartOf="@id/tv_price"
+        app:layout_constraintTop_toBottomOf="@id/tv_price"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        tools:listitem="@layout/list_item"
+        app:spanCount="2"
+        tools:itemCount="4"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEndMain"
+        app:layout_constraintStart_toStartOf="@id/guidelineStartMain"
+        app:layout_constraintTop_toBottomOf="@id/tv_date" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
